@@ -1,0 +1,24 @@
+import styled from 'styled-components'
+
+export const SearchPostsInput = styled.input`
+  margin-top: 0.75rem;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  height: 3.25rem;
+  background: ${(props) => props.theme['base-input']};
+  border: 1px solid ${(props) => props.theme['base-border']};
+  border-radius: 6px;
+
+  &::placeholder {
+    color: ${(props) => props.theme['base-label']};
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+`
+
+export const PostsContainer = styled.div`
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+`
