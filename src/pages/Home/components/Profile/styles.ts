@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const ProfileContainer = styled.div`
-  z-index: 100;
+  position: relative;
   margin-top: -5.5rem;
   background-color: ${(props) => props.theme['base-profile']};
   padding: 2rem 2.5rem;
