@@ -1,11 +1,12 @@
+import { ArticleContent } from './ArticleContent'
 import { ArticleHeader } from './ArticleHeader'
-import { Content, PostScreenContainer } from './styles'
+import { PostScreenContainer } from './styles'
 
 export function PostScreen() {
   return (
     <PostScreenContainer>
       <ArticleHeader />
-      <Content></Content>
+      <ArticleContent># Hello, *world* !</ArticleContent>
     </PostScreenContainer>
   )
 }
