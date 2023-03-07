@@ -4,7 +4,7 @@ export const HeaderContainer = styled.header`
   height: 18.5rem;
   display: flex;
   justify-content: space-between;
-  background-color: ${(props) => props.theme['base-profile']};
+  background-color: ${(props) => props.theme['base-post']};
   overflow: hidden;
 `
 
@@ -30,8 +30,10 @@ export const LogoContainer = styled.div`
 `
 
 export const EffectRight = styled.div`
-  padding-top: 1.875rem;
+  padding: 1.875rem 0;
   width: 35%;
+  display: flex;
+  justify-content: end;
 
   svg {
     width: 100%;
