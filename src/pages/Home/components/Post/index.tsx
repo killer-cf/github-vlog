@@ -4,7 +4,7 @@ export function Post() {
   return (
     <PostContainer>
       <header>
-        <h2>JavaScript data types and data structures</h2>
+        <a href="#">JavaScript data types and data structures</a>
         <span>Há 1 dia</span>
       </header>
       <div>

@@ -42,6 +42,12 @@ export const ProfileInfo = styled.div`
     text-decoration: none;
     display: flex;
     gap: 0.5rem;
+
+    :hover {
+      border-bottom: 1px solid ${(props) => props.theme.blue};
+      transition: border 0.2;
+      align-self: baseline;
+    }
   }
 
   p {
