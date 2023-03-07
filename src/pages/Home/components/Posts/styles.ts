@@ -21,4 +21,10 @@ export const PostsContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
+
+  @media screen and (max-width: 48rem) {
+    max-width: 26rem;
+    margin: 3rem auto;
+    grid-template-columns: 1fr;
+  }
 `
