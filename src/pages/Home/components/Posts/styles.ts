@@ -8,6 +8,9 @@ export const SearchPostsInput = styled.input`
   background: ${(props) => props.theme['base-input']};
   border: 1px solid ${(props) => props.theme['base-border']};
   border-radius: 6px;
+  color: ${(props) => props.theme['base-text']};
+  font-size: 1rem;
+  line-height: 1.6;
 
   &::placeholder {
     color: ${(props) => props.theme['base-label']};
@@ -17,7 +20,7 @@ export const SearchPostsInput = styled.input`
 `
 
 export const PostsContainer = styled.div`
-  margin-top: 3rem;
+  margin: 3rem 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
