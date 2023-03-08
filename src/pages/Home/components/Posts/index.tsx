@@ -21,6 +21,15 @@ export function Posts() {
     getPosts()
   }, [])
 
+  const posts =
+    inputText.length > 0
+      ? postsData.filter(
+          (post: any) =>
+            post.title.toLowerCase().includes(inputText) ||
+            post.body.toLowerCase().includes(inputText),
+        )
+      : postsData
+
   return (
     <>
       <PostsInfo>
@@ -34,8 +43,8 @@ export function Posts() {
         onChange={(e) => setInputText(e.target.value)}
       />
       <PostsContainer>
-        {postsData.length > 0 &&
-          postsData.map((post: any) => (
+        {posts.length > 0 &&
+          posts.map((post: any) => (
             <Post
               key={post.number}
               title={post.title}
