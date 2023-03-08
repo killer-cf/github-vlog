@@ -1,3 +1,5 @@
+import { formatDistanceToNow } from 'date-fns'
+import { ptBR } from 'date-fns/locale'
 import { BsBoxArrowUpRight } from 'react-icons/bs'
 import {
   FaCalendarDay,
@@ -7,7 +9,21 @@ import {
 } from 'react-icons/fa'
 import { PostInfoBoxes, TitleBox } from './styles'
 
-export function ArticleHeader() {
+interface ArticleHeaderProps {
+  title: string
+  comments: number
+  url: string
+  date: string
+  user: string
+}
+
+export function ArticleHeader({
+  title,
+  comments,
+  url,
+  date,
+  user,
+}: ArticleHeaderProps) {
   return (
     <TitleBox>
       <header>
@@ -15,28 +31,33 @@ export function ArticleHeader() {
           <FaChevronLeft />
           VOLTAR
         </a>
-        <a href="#">
+        <a href={url}>
           VER NO GITHUB
           <BsBoxArrowUpRight />
         </a>
       </header>
       <div>
-        <h2>JavaScript data types and data structures</h2>
+        <h2>{title}</h2>
       </div>
       <PostInfoBoxes>
         <div>
           <FaGithub size={18} />
-          <span>killer-cf</span>
+          <span>{user}</span>
         </div>
 
         <div>
           <FaCalendarDay size={18} />
-          <span>Há 1 dia</span>
+          <span>
+            {formatDistanceToNow(new Date(date), {
+              addSuffix: true,
+              locale: ptBR,
+            })}
+          </span>
         </div>
 
         <div>
           <FaComment size={18} />
-          <span>5 Comentários</span>
+          <span>{comments} Comentários</span>
         </div>
       </PostInfoBoxes>
     </TitleBox>

@@ -1,5 +1,6 @@
 import { formatDistanceToNow } from 'date-fns'
 import ptBR from 'date-fns/locale/pt-BR'
+import removeMarkdown from 'remove-markdown'
 
 import { PostContainer } from './styles'
 
@@ -11,6 +12,8 @@ interface PostsProps {
 }
 
 export function Post({ title, description, date, id }: PostsProps) {
+  const body = removeMarkdown(description)
+
   return (
     <PostContainer>
       <header>
@@ -23,7 +26,7 @@ export function Post({ title, description, date, id }: PostsProps) {
         </span>
       </header>
       <div>
-        <p>{description}</p>
+        <p>{body}</p>
       </div>
     </PostContainer>
   )
