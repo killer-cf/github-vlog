@@ -25,7 +25,7 @@ export const PostContainer = styled.div`
     }
 
     span {
-      white-space: nowrap;
+      min-width: 4rem;
       color: ${(props) => props.theme['base-span']};
       font-size: 0.75rem;
       line-height: 1.6;
